@@ -8,7 +8,9 @@ O repositório está organizado por aulas, e cada diretório corresponde a uma a
 
 ## Conteúdos
 
-- **Aula 28/08**: Lista 1 de exercícios: Criação de classes básicas e método construtor.
+- 15/08/2024 - Revisão de funções; Sintaxe de metodos; Classes em Java;
+- 29/08/2024 - Método construtor; Lista 1.
+- 05/09/2024 - Lista 1, questões 4 e 5.
 
 *(Os conteúdos serão atualizados conforme o progresso das aulas.)*
 
