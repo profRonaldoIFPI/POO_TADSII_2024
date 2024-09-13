@@ -11,6 +11,12 @@ public class Aula1209 {
                 "89994129138",
                 LocalDate.of(1981, 12, 30)
             );
-        System.out.println(p.getIdade());
+        System.out.println(p.getTelefone());
+        p.setTelefone("89994121107");
+        System.out.println(p.getTelefone());
+        p.setTelefone("89 94121107");
+        System.out.println(p.getTelefone());
+        
+        
     }
 }

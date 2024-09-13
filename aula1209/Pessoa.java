@@ -1,6 +1,7 @@
 package aula1209;
 import java.time.LocalDate;
 import java.time.Period;
+
 public class Pessoa {
     private String nome;
     private String cpf;
@@ -11,7 +12,7 @@ public class Pessoa {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
-        this.telefone = telefone;
+        this.setTelefone(telefone);
         this.nascimento = nascimento;
     }
     public void setNome(String nome){
@@ -26,11 +27,9 @@ public class Pessoa {
     public LocalDate getNascimento(){
         return this.nascimento;
     }
-
     public String getCpf() {
         return cpf;
     }
-
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
@@ -56,7 +55,16 @@ public class Pessoa {
         return telefone;
     }
     public void setTelefone(String telefone) {
-        this.telefone = telefone;
+        char[] caracteres = telefone.toCharArray();
+        boolean saoDigitos = true;
+        for(int i=0; i<caracteres.length; i++){
+            saoDigitos &= Character.isDigit(caracteres[i]);
+        }
+        if(saoDigitos && telefone.length()==11){
+            this.telefone = telefone;
+        }else{
+            System.out.println("Formato ou telefone invalido.");
+        }
     }
     public int getIdade(){
         Period periodo = Period.between(this.nascimento,LocalDate.now());
